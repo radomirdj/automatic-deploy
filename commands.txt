@@ -1,0 +1,13 @@
+docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" 5e46c398f6c0
+doesn't have to do [docker run -p 3000:3000 -v /app/node_modules -v "$(pwd):/app" 5e46c398f6c0], just
+docker compose up
+
+
+tests ---
+docker build -f Dockerfile.dev .
+docker run -it a1b8005186c5 npm run test
+
+
+
+docker exec -it e82698826647 sh  //starts process in container --- shell
+docker ps
