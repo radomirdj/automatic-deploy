@@ -7,3 +7,16 @@ before_install:
 
 script:
   - docker run radomir/frontend npm run test -- --coverage
+
+provider:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "automatic-deploy"
+  env: "AutomaticDeploy-env"
+  bucket: "elasticbeanstalk-us-east-1-154909137467"
+  bucket_path: "automatic-deploy"
+  on:
+    branch: master
+  acces_key_id: "AWS_SECRET_KEY"
+  secret_access_key:
+    secure: "AWS_SECRET_KEY"
