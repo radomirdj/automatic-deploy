@@ -10,10 +10,10 @@ script:
 
 deploy:
   provider: elasticbeanstalk
-  region: "us-east-1"
+  region: "eu-central-1"
   app: "automatic-deploy"
   env: "AutomaticDeploy-env"
-  bucket_name: "elasticbeanstalk-us-east-1-154909137467"
+  bucket_name: "elasticbeanstalk-eu-central-1-154909137467"
   bucket_path: "automatic-deploy"
   on:
     branch: master
